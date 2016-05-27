@@ -184,3 +184,6 @@ function init() {
         map: map,
     });
 }
+// wow doge animation
+new WOW().init();
+
