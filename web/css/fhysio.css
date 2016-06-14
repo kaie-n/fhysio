@@ -32,7 +32,7 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0 0 15px;
+    margin: 20px 0 15px;
     text-transform: uppercase;
     font-family: BIG-JOHN;
     font-weight: 700;
@@ -60,7 +60,7 @@ a {
 
     a:hover,
     a:focus {
-        text-decoration: none;
+        text-decoration: underline;
         color: #f6ff00;
     }
 
@@ -170,7 +170,7 @@ a {
     padding: 100px 0;
     text-align: left;
     color: #fff;
-    background: url(../img/intro-bg.jpg) no-repeat top center scroll;
+    background: url(../img/intro-bg.jpg) no-repeat top center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -221,6 +221,11 @@ a {
 .yellow {
     color: #f6ff00 !important;
 }
+
+    .yellow:hover {
+        color: #f6ff00 !important;
+        text-decoration: underline;
+    }
 
 .btn-circle:hover,
 .btn-circle:focus {
@@ -325,22 +330,30 @@ a {
 
 .contact {
     background: #40a496;
-    height: 75%;
+    height: auto;
     z-index: 251;
-    padding-top: 15px;
-    position: absolute;
-    top: 100px;
+    padding-top: 15px !important;
+    position:static;
+    top: 0px;
     right: 0px;
 }
 
 #contact.row {
-    height: 100%;
+    /*height: 100%;*/
+}
+#contact{
+    background:#40a496;
 }
 
 @media(min-width:767px) {
-    .contact{
-        right:25px;
+    .contact {
+        height:75%;
+        right: 25px;
+        top: 100px;
+        position: absolute;
+        
     }
+
     .content-section {
         /*padding-top: 250px;*/
     }
@@ -406,6 +419,7 @@ footer {
     background: #FFF;
     color: #40a496;
     height: auto;
+    margin-top:567px;
 }
 
     footer p {
@@ -416,7 +430,11 @@ footer {
     footer a {
         color: #40a496 !important;
     }
-
+@media(min-width:768px) {
+    footer {
+        margin-top:0px;
+    }
+}
 ::-moz-selection {
     text-shadow: none;
     background: #fcfcfc;
@@ -442,7 +460,7 @@ body {
 }
 
 .form-control {
-    font-family:Karla-Regular;
+    font-family: Karla-Regular;
     display: block;
     border: 0px;
     width: 100%;
@@ -451,30 +469,73 @@ body {
     font-size: 14px;
     line-height: 1.42857143;
     color: #FFF;
-    background-color: transparent;
+    background-color: #40a496;
     background-image: none;
     border-bottom: 1px solid #ccc;
-     border-radius: 0px; 
+    border-radius: 0px;
     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
     box-shadow: inset 0 0px 0px rgba(0,0,0,.075);
     -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
     -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
-.form-control::-webkit-input-placeholder { color: white; }
-.form-control:-moz-placeholder { color: white; }
-.form-control::-moz-placeholder { color: white; }
-.form-control:-ms-input-placeholder { color: white; }
-.form-control:focus {
-     border-color: #FFF; 
-    outline: 0;
-     -webkit-box-shadow: inset 0 0px 1px rgba(0,0,0,.075),0 0 1px rgba(102,175,233,.6); 
-     box-shadow: inset 0 0px 1px rgba(0,0,0,.075),0 0 1px rgba(102,175,233,.6); 
-}
+
+    .form-control::-webkit-input-placeholder {
+        color: white;
+    }
+
+    .form-control:-moz-placeholder {
+        color: white;
+    }
+
+    .form-control::-moz-placeholder {
+        color: white;
+    }
+
+    .form-control:-ms-input-placeholder {
+        color: white;
+    }
+
+    .form-control:focus {
+        border-color: #FFF;
+        outline: 0;
+        -webkit-box-shadow: inset 0 0px 1px rgba(0,0,0,.075),0 0 1px rgba(102,175,233,.6);
+        box-shadow: inset 0 0px 1px rgba(0,0,0,.075),0 0 1px rgba(102,175,233,.6);
+    }
+
 .btn-block {
     display: block;
     width: 100%;
-    height: 63px;
+    height: 83px;
     background: #FFF;
-    border:0;
+    border: 0;
+}
+
+    .btn-block:hover {
+        background: #40a496;
+        color: #FFF;
+    }
+
+.form-group {
+    margin-bottom: 0px;
+}
+
+@media(min-width:768px) {
+    .form-group {
+        margin-bottom: 15px;
+    }
+}
+#cloud-container{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    overflow:scroll;
+    z-index:-1; /* Remove this line if it's not going to be a background! */
+}
+td, th {
+    padding: 0;
+    font-size: 16px;
+    font-weight: normal;
 }
