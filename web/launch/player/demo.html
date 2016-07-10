@@ -1,0 +1,39 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div.broadway {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .broadway canvas {
+            display: inline;
+            height: 100%;
+        }
+
+        @media(min-width:768px) {
+            .broadway canvas {
+                display: inline;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <script type="text/javascript" src="broadwayPlayer-min.js"></script>
+
+    <div class="broadway" src="video.mp4" workers="false" render="true" webgl="auto" loop="true">
+    </div>
+</body>
+</html>

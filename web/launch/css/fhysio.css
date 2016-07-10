@@ -660,7 +660,12 @@ td, th {
         max-width: 100%;
         position: relative;
     }
-
+@media(min-width:768px) {
+    #about img {
+        max-width: unset;
+        position: absolute;
+    }
+}
 
 
 #about-bottom {
@@ -723,7 +728,11 @@ td, th {
   
 }
 @media(min-width:768px) {
-    #about img, #benefit img {
+    #about img {
+        max-width: unset;
+        position: absolute;
+    }
+    #benefit img {
         max-width: none;
         position: absolute;
     }
