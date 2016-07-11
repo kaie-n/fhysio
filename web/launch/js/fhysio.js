@@ -1,8 +1,4 @@
-/*!
- * Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
+
 
 // jQuery to collapse the navbar on scroll
 function collapseNavbar() {
@@ -40,3 +36,64 @@ var wow = new WOW({
 })
 
 wow.init();
+
+$(document).ready(function () {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        //
+        var checkLoaded = setInterval(function () {
+            // Do something every 5 seconds
+            console.log('false');
+
+            if ($('.broadway canvas').attr('width') == '960') {
+                //console.log('TRUE');
+                setTimeout(function () {
+                    var cwidth = -(($('.broadway canvas').width() / 2) - ($(window).width() / 2))
+                    $('.broadway canvas').css({ position: 'absolute', left: cwidth });
+                }, 1000);
+
+                clearInterval(checkLoaded);
+            }
+        }, 100);
+
+
+
+    }
+    else {
+        $('.broadway canvas').removeAttr('style');
+    }
+
+    $(window).on('orientationchange', function (event) {
+        // if portrait mode
+        checkOrientation()
+    });
+    checkOrientation()
+    $(window).resize(function () {
+        checkOrientation()
+    });
+
+
+    $input = $('input[type="text"]');
+
+    $('button').on('click', function () {
+        $val = $input.val();
+        if ($(this).attr('name') == 'minus') {
+            if ($input.val() > 0) {
+                $input.val(parseInt($val) - 1);
+            }
+        } if ($(this).attr('name') == 'plus') {
+            $input.val(parseInt($val) + 1);
+        }
+    });
+})
+function checkOrientation() {
+    if (window.innerHeight > window.innerWidth) {
+        $('.broadway canvas').removeAttr('style');
+        var cwidth = -(($('.broadway canvas').width() / 2) - ($(window).width() / 2))
+        $('.broadway canvas').css({ position: 'absolute', left: cwidth });
+    }
+        //landscape
+    else {
+        $('.broadway canvas').removeAttr('style');
+        $('.broadway canvas').css({ width: '100%' });
+    }
+}

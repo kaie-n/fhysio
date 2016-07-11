@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Fhysiolab International</title>
@@ -66,14 +66,21 @@
             </div>
             <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
+        <!-- /.container-fluid -->
     </nav>
     <!-- Intro Header -->
+   
     <header class="intro">
+        <script type="text/javascript" src="player/broadwayPlayer-min.js"></script>
+
+        <div class="broadway" src="player/video.mp4" workers="false" render="true" webgl="auto" loop="true">
+        </div>
+        <div class="grey-overlay"></div>
+        <div class="landing-line-overlay"></div>
         <div class="intro-body">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-5">
+                    <div class="col-md-5 col-md-offset-2">
                         <h1 class="brand-heading">
                             WELCOME
                             TO FHYSIO
@@ -91,11 +98,11 @@
         </div>
     </header>
     <!-- About Section -->
-    <section id="about" class="container content-section text-center">
+    <section id="about" class="container-fluid content-section text-center">
         <div class="intro-body">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-md-offset-1">
                         <img src="img/shadow.png" class="wow fadeInUp" style="position:absolute;   top: 190px; right:0px" />
                         <img src="img/balls.png" class="wow fadeInUp" style="position:absolute;     top: 290px;" />
                         <img src="img/foam-roller.png" class="wow fadeInUp" style="position:absolute;   top: -140px;" />
@@ -113,9 +120,9 @@
             </div>
         </div>
     </section>
-    <section id="about-bottom" class="container content-section text-center">
+    <section id="about-bottom" class="container-fluid content-section text-center">
         <div class="intro-body">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1 text-center">
                         <div class="col-md-4">
@@ -136,7 +143,7 @@
         </div>
     </section>
     <!-- Benefit Section -->
-    <section id="benefit" class="container content-section text-center">
+    <section id="benefit" class="container-fluid content-section text-center">
         <!--<div style="width: 98%;
     height: 105%;
     position: absolute;
@@ -150,9 +157,9 @@
         <img src="img/model.png" class="wow fadeInUp" style="position:absolute;   bottom: 0px; right:0px;" />
         <div class="intro-body">
         
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-5">
+                    <div class="col-lg-5 col-md-offset-2">
                         <h1 class="brand-heading">
                             BENEFITS OF
                             FHYSIO
