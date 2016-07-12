@@ -359,62 +359,6 @@ a {
     padding-left: 10px;
 }
 
-.download-section {
-    width: 100%;
-    padding: 50px 0;
-    color: #fff;
-    background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
-    background-color: #85c5bc;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-#map {
-    width: 100%;
-    height: 100%;
-}
-
-.contact {
-    background: #40a496;
-    height: auto;
-    z-index: 251;
-    padding-top: 15px !important;
-    position: static;
-    top: 0px;
-    right: 0px;
-}
-
-#contact.row {
-    /*height: 100%;*/
-}
-
-#contact {
-    background: #40a496;
-}
-
-@media(min-width:767px) {
-    .contact {
-        height: 75%;
-        right: 25px;
-        top: 100px;
-        position: absolute;
-    }
-
-    .content-section {
-        /*padding-top: 250px;*/
-    }
-
-    .download-section {
-        padding: 100px 0;
-    }
-
-    #map {
-        height: 75%;
-        /*position: absolute;*/
-    }
-}
 
 .btn {
     border-radius: 0;
@@ -1086,3 +1030,227 @@ div.broadway {
         border: 0;
         outline: none;
     }
+
+.product-header-bg {
+    background: url(../img/product-bg-header.jpg) no-repeat top center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+    .product-header-bg img {
+        max-width: 100%;
+        position: relative;
+    }
+
+@media (min-width: 768px) {
+    .product-header-bg {
+        background: url(../img/product-bg-header.jpg) no-repeat top center;
+        -webkit-background-size: 100% 100%;
+        -moz-background-size: 100% 100%;
+        background-size: 100% 100%;
+        -o-background-size: 100% 100%;
+    }
+
+        .product-header-bg img {
+            max-width: unset;
+            position: absolute;
+        }
+}
+
+#product-list-1 {
+    display: table;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    color: #40a496;
+    background: url(../img/product-bg-section-1.jpg) no-repeat top center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    position:relative;
+}
+
+    #product-list-1 .btn-default {
+        border: 1px solid #cccccc;
+        color: #40a496;
+        border-radius: 10px;
+    }
+
+        #product-list-1 .btn-default:hover {
+            border: 1px solid #cccccc;
+            color: #FFF;
+            border-radius: 10px;
+        }
+
+    #product-list-1 .col-md-4 {
+        padding-top: 50px;
+    }
+
+@media(min-width:768px) {
+    #product-list-1 {
+        display: table;
+        width: 100%;
+        height: 703px;
+        text-align: left;
+        color: #40a496;
+        background: url(../img/product-bg-section-1.jpg) no-repeat top center;
+        -webkit-background-size: 100% 100%;
+        -moz-background-size: 100% 100%;
+        background-size: 100% 100%;
+        -o-background-size: 100% 100%;
+        position:relative;
+    }
+
+        #product-list-1 .intro-body {
+            display: table-cell;
+            vertical-align: middle;
+            position:relative;
+        }
+}
+
+
+#product-list-1 img {
+    max-width: 100%;
+    position: relative;
+    bottom:90px;
+}
+
+@media(min-width:768px) {
+    #product-list-1 img {
+        max-width: 90%;
+        position: absolute;
+        bottom:0;
+        top:0;
+    }
+}
+
+
+#product-list-2 {
+    display: table;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    color: #FFF;
+    background: url(../img/product-bg-section-2.jpg) no-repeat top center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+    #product-list-2 .btn-default {
+        border: 1px solid #cccccc;
+        color: #FFF;
+        border-radius: 10px;
+    }
+
+        #product-list-2 .btn-default:hover {
+            border: 1px solid #cccccc;
+            color: #FFF;
+            border-radius: 10px;
+        }
+
+    #product-list-2 .col-md-4 {
+    }
+
+@media(min-width:768px) {
+    #product-list-2 {
+        display: table;
+        width: 100%;
+        height: 692px;
+        text-align: left;
+        color: #FFF;
+        background: url(../img/product-bg-section-2.jpg) no-repeat top center;
+        -webkit-background-size: 100% 100%;
+        -moz-background-size: 100% 100%;
+        background-size: 100% 100%;
+        -o-background-size: 100% 100%;
+    }
+
+        #product-list-2 .intro-body {
+            display: table-cell;
+            vertical-align: middle;
+        }
+}
+
+#product-list-2 img {
+    max-width: 100%;
+    position: relative;
+    bottom:0;
+    top:0;
+}
+
+
+@media(min-width:768px) {
+    #product-list-2 img {
+        max-width: unset;
+        position: absolute;
+        top:-220px;
+    }
+}
+
+#product-list-3 {
+    display: table;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    color: #FFF;
+    background: url(../img/product-bg-section-3.jpg) no-repeat top center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+    #product-list-3 .btn-default {
+        border: 1px solid #cccccc;
+        color: #FFF;
+        border-radius: 10px;
+    }
+
+        #product-list-3 .btn-default:hover {
+            border: 1px solid #cccccc;
+            color: #FFF;
+            border-radius: 10px;
+        }
+
+    #product-list-3 .col-md-4 {
+        padding-top: 50px;
+    }
+
+@media(min-width:768px) {
+    #product-list-3 {
+        display: table;
+        width: 100%;
+        height: 100%;
+        text-align: left;
+        color: #FFF;
+        background: url(../img/product-bg-section-3.jpg) no-repeat top center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    }
+
+        #product-list-3 .intro-body {
+            display: table-cell;
+            vertical-align: middle;
+        }
+}
+
+#product-list-3 img {
+    max-width: 100%;
+    position: relative;
+
+}
+
+
+@media(min-width:768px) {
+    #product-list-3 img {
+        max-width: unset;
+        position: absolute;
+    }
+}

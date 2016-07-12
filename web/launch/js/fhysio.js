@@ -40,21 +40,21 @@ wow.init();
 $(document).ready(function () {
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         //
-        var checkLoaded = setInterval(function () {
-            // Do something every 5 seconds
-            console.log('false');
+        if ($('.broadway').length) {
+            var checkLoaded = setInterval(function () {
+                // Do something every 5 seconds
 
-            if ($('.broadway canvas').attr('width') == '960') {
-                //console.log('TRUE');
-                setTimeout(function () {
-                    var cwidth = -(($('.broadway canvas').width() / 2) - ($(window).width() / 2))
-                    $('.broadway canvas').css({ position: 'absolute', left: cwidth });
-                }, 1000);
+                if ($('.broadway canvas').attr('width') == '960') {
+                    //console.log('TRUE');
+                    setTimeout(function () {
+                        var cwidth = -(($('.broadway canvas').width() / 2) - ($(window).width() / 2))
+                        $('.broadway canvas').css({ position: 'absolute', left: cwidth });
+                    }, 1000);
 
-                clearInterval(checkLoaded);
-            }
-        }, 100);
-
+                    clearInterval(checkLoaded);
+                }
+            }, 100);
+        }
 
 
     }

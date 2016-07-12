@@ -45,7 +45,7 @@
                     </li>
 
                     <li>
-                        <a class="page-scroll" href="#">Shop</a>
+                        <a class="page-scroll" href="product.html">Shop</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#">Learn</a>
@@ -104,11 +104,7 @@
     margin-left: -455.5px;
     margin-top: 200px; max-width:100%;" />
                         <img src="img/foam-roller-pink.png" class="hidden-xs wow fadeInUp" style="position:absolute; top:50%; left:50%; margin-top:-220px; margin-left:-141px" data-wow-offset="400" />
-                        <img src="img/foam-roller-inv.png" class="hidden-xs wow fadeInUp"
-                             style="position:absolute; top: 50%;
-    left: 50%;
-    margin-top: -280px;
-    margin-left: -275.5px;" data-wow-offset="400" />
+
                         <img src="img/foam-roller-combined.png" class="visible-xs-*  hidden-sm hidden-lg hidden-md wow fadeInUp" />
                     </div>
 
@@ -119,6 +115,11 @@
     <section id="product-section-2" class="container content-section text-center">
         <div class="intro-body">
             <div class="container-fluid ">
+                <img id="target-1" src="img/foam-roller-inv.png" class="hidden-xs wow fadeInUp"
+                     style="position:absolute; top: 50%;
+    left: 50%;
+    margin-top: -280px;
+    margin-left: -275.5px;" data-wow-offset="400" />
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <h1 class="brand-heading">
@@ -167,7 +168,7 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2 text-center">
                         <h1 class="brand-heading">
-                            FOAM ROLLER 
+                            FOAM ROLLER
                             $50.99
                         </h1>
                         <h2 class="second-heading">colour selection</h2>
@@ -233,5 +234,17 @@
     <script src="js/wow.js"></script>
     <!-- Theme JavaScript -->
     <script src="js/fhysio.js"></script>
+    <script>
+        $(window).scroll(function () {
+            var st = $(this).scrollTop();
+            console.log(st)
+            if (st > 626) {
+                $('#target-1').css({ position: 'absolute', top: '-550px' })
+            }
+            if (st >= 1700) {
+                $('#target-1').css({ position: 'absolute', top: '50%' })
+            }
+        });
+    </script>
 </body>
 </html>
