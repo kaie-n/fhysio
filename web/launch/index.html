@@ -11,6 +11,7 @@
     <link rel="icon" type="image/png" href="img/favicon.png" />
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom Fonts -->
+    <link href="jquery-ui/jquery-ui.css" rel="stylesheet" />
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="css/animate.css" rel="stylesheet" />
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
@@ -26,6 +27,7 @@
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
     <!-- Navigation -->
+
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -33,7 +35,12 @@
                     Menu <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">
-                    <img src="img/logo.png" />
+                    <img src="img/logo.png" id="green-logo" class="" style="display:none" />
+                    <div class="logo-nav">
+                        <!--<img src="img/logo-white.png" id="white-logo" class="" />-->
+                        <img src="img/logo-blank.png" />
+                    </div>
+
                 </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -47,9 +54,9 @@
                     <li>
                         <a class="page-scroll" href="product.html">Shop</a>
                     </li>
-                    <li>
+                    <!--<li>
                         <a class="page-scroll" href="#">Learn</a>
-                    </li>
+                    </li>-->
                     <li>
                         <a class="page-scroll" href="#">About</a>
                     </li>
@@ -69,7 +76,7 @@
         <!-- /.container-fluid -->
     </nav>
     <!-- Intro Header -->
-   
+
     <header class="intro">
         <script type="text/javascript" src="player/broadwayPlayer-min.js"></script>
 
@@ -86,7 +93,7 @@
                             TO FHYSIO
                         </h1>
                         <p class="intro-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas elementum elit leo, in
+                            FHYSIO is about bringing fun and interactive ways of keeping fit to every household and every individual.
                         </p>
                         <a href="#about" class="page-scroll">
                             <!-- Standard button -->
@@ -113,7 +120,10 @@
                             SHOP
                             FHYSIO
                         </h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas elementum elit leo, in laoreet nisl facilisis eget. Aliquam vehicula purus quis vestibulum interdum. In vehicula rhoncus.</p>
+                        <p>
+                            Our products are ergonomically designed for you to maximise output and reduce inefficiency.
+                            Our equipment is tailored towards different body types and conditions, so that you can pick what suits you best!
+                        </p>
                         <button type="button" class="btn btn-default">SHOP NOW</button>
                     </div>
                 </div>
@@ -130,8 +140,8 @@
                             <p>Fhysio equipment is made of premium quality material to ensure that you have the best to work with.</p>
                         </div>
                         <div class="col-md-4">
-                            <p><img src="img/multiple-users.png" /></p>
-                            <p>Fhysio equipment is suitable for any age and abilities.</p>
+                            <p><img src="img/leaf.png" /></p>
+                            <p>Fhysio equipment are all Eco-friendly for a more sustainable future for us. </p>
                         </div>
                         <div class="col-md-4">
                             <p><img src="img/bar-chart.png" /></p>
@@ -144,57 +154,129 @@
     </section>
     <!-- Benefit Section -->
     <section id="benefit" class="container-fluid content-section text-center">
-        <!--<div style="width: 98%;
-    height: 105%;
-    position: absolute;
-    display: table;
-    background: url(img/model.png) no-repeat top right;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: contain;
-    -o-background-size: cover;
-    top: -50px;"></div>-->
         <img src="img/model.png" class="wow fadeInUp" style="position:absolute;   bottom: 0px; right:0px;" />
         <div class="intro-body">
-        
+
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-5 col-md-offset-2">
                         <h1 class="brand-heading">
-                            BENEFITS OF
-                            FHYSIO
+                            Our mission
                         </h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas elementum elit leo, in laoreet nisl facilisis eget. Aliquam vehicula purus quis vestibulum interdum. In vehicula rhoncus </p>
+                        <p>
+                            We are dedicated to bringing fitness and health to every individual, by designing products
+                            that are fun, simple and dynamic to use.
+                        </p>
                         <a href="#about" class="page-scroll">
                             <!-- Standard button -->
-                            <button type="button" class="btn btn-default">LEARN MORE</button>
+                            <button type="button" class="btn btn-default">COntact us now!</button>
                         </a>
                     </div>
 
                 </div>
             </div>
         </div>
+
     </section>
 
     <!-- Footer -->
     <footer>
+        <div id="footer-sections" class="container-fluid content-auto text-center">
+            <div class="intro-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-offset-2 text-left">
+                            <h4 class="brand-heading">
+                                PRIVACY POLICY
+                            </h4>
+                            <p>
+                                This privacy policy sets out how Fhysiolab International Pte. Ltd. uses and protects any information that you give Fhysiolab International Pte. Ltd. when you use this website. We are committed to ensuring that your privacy is protected. Should we ask you to provide certain information by which you can be identified when using this website, then you can be assured that it will only be used in accordance with this privacy statement. Fhysiolab International Pte. Ltd. may change this policy from time to time by updating this page. You should check this page from time to time to ensure that you are happy with any changes.
+                            </p>
+                            <p>
+                                WHAT WE COLLECT
+                            </p>
+                            <p>
+                                We may collect the following information:
+                            </p>
+                            <ul class="footer-sections">
+                                <li>Name and job title</li>
+                                <li>Contact information including email address</li>
+                                <li>Demographic information such as postcode, preferences and interests</li>
+                                <li>Other information relevant to customer surveys and/or offers</li>
+                            </ul>
+                            <p>
+                                SECURITY
+                            </p>
+                            <p>
+                                We will never give out or sell any of your information. We are committed to ensuring that your information is secure. In order to prevent unauthorised access or disclosure we have put in place suitable physical, electronic and managerial procedures to safeguard and secure the information we collect online. Our secure servers protect your information using advanced encryption techniques and firewall technology.
+                            </p>
+                            <p>
+                                SUBSCRIPTION
+                            </p>
+                            <p>
+                                To keep you informed about our latest offers, we may notify you of current promotions, specials and new additions to this store. You may unsubscribe from our newsletters by following the unsubscribe instructions in any email you receive from us.
+                            </p>
+                            <p>
+                                COOKIES
+                            </p>
+                            <p>
+                                We use “cookies” to keep track of your current shopping session to personalise your experience and so that you may retrieve your shopping cart at any time.
+                            </p>
+                            <p>
+                                LINKS TO OTHER WEBSITES
+                            </p>
+                            <p>
+                                Our website may contain links to enable you to visit other websites of interest easily. However, once you have used these links to leave our site, you should note that we do not have any control over that other website. Therefore, we cannot be responsible for the protection and privacy of any information which you provide whilst visiting such sites and such sites are not governed by this privacy statement. You should exercise caution and look at the privacy statement applicable to the website in question.
+                            </p>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="container">
             <div class="row">
-                <ul>
-                    <li>PRIVACY POLICY</li>
+                <ul class="list">
+                    <li><a onclick="$('#footer-sections').toggle('slide', {direction:'down'})">PRIVACY POLICY</a></li>
                     <li>TERMS OF USE</li>
-                    <li> BLOG </li>
                     <li>DISTRIBUTORS</li>
                 </ul>
             </div>
             <div class="row">
-                <p>&copy; 2016 FHYSIO INTERNATIONAL. ALL RIGHTS RESERVED. </p>
+                <p>&copy; 2016 FHYSIOLAB INTERNATIONAL PTE LTD. ALL RIGHTS RESERVED. </p>
                 <p>FHYSIO PRODUCTS ARE NOT MEANT TO TREAT, CURE OR PREVENT ANY DISEASE OR CONDITION. TALK TO YOUR DOCTOR BEFORE USE. PLEASE ENJOY RESPONSIBLY.</p>
             </div>
         </div>
     </footer>
+    <div id="subscribe" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position:absolute; top:10; right:10px;"><span aria-hidden="true"><i class="fa fa-times fa-1x"></i></span></button>
+
+                    <div class="col-md-12">
+                        <h1>subscribe for the latest update!</h1>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="email" placeholder="YOUR EMAIL">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn-block" data-dismiss="modal" style="color:#85c5bc">SUBSCRIBE NOW!</button>
+                            <div id="success"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.js"></script>
+    <script src="jquery-ui/jquery-ui.js"></script>
+
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <!-- Plugin JavaScript -->

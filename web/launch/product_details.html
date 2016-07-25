@@ -33,7 +33,12 @@
                     Menu <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">
-                    <img src="img/logo.png" />
+                    <img src="img/logo.png" id="green-logo" class="" style="display:none" />
+                    <div class="logo-nav">
+                        <!--<img src="img/logo-white.png" id="white-logo" class="" />-->
+                        <img src="img/logo-blank.png" />
+                    </div>
+
                 </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -47,9 +52,9 @@
                     <li>
                         <a class="page-scroll" href="product.html">Shop</a>
                     </li>
-                    <li>
+                    <!--<li>
                         <a class="page-scroll" href="#">Learn</a>
-                    </li>
+                    </li>-->
                     <li>
                         <a class="page-scroll" href="#">About</a>
                     </li>
@@ -66,7 +71,7 @@
             </div>
             <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
+        <!-- /.container-fluid -->
     </nav>
     <!-- Intro Header -->
 
@@ -102,7 +107,7 @@
                         <img src="img/shadow-2.png" class="hidden-xs hidden-md wow fadeInUp" style="position:absolute; top: 50%;
     left: 50%;
     margin-left: -455.5px;
-    margin-top: 200px; max-width:100%;" />
+    margin-top: 200px; max-width:100%; "/>
                         <img src="img/foam-roller-pink.png" class="hidden-xs wow fadeInUp" style="position:absolute; top:50%; left:50%; margin-top:-220px; margin-left:-141px" data-wow-offset="400" />
 
                         <img src="img/foam-roller-combined.png" class="visible-xs-*  hidden-sm hidden-lg hidden-md wow fadeInUp" />
@@ -116,10 +121,10 @@
         <div class="intro-body">
             <div class="container-fluid ">
                 <img id="target-1" src="img/foam-roller-inv.png" class="hidden-xs wow fadeInUp"
-                     style="position:absolute; top: 50%;
+                     style="position:absolute; top: -550px;
     left: 50%;
     margin-top: -280px;
-    margin-left: -275.5px;" data-wow-offset="400" />
+    margin-left: -275.5px;z-index:2000;" data-wow-offset="400" />
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <h1 class="brand-heading">
@@ -127,7 +132,7 @@
                         </h1>
                     </div>
                     <div class="row">
-                        <div class="col-md-4 col-md-offset-2 wow fadeInLeft">
+                        <div class="col-md-4 col-md-offset-1 wow fadeInLeft">
                             <img src="img/foam-roller-detail-1.png" />
                             <ul>
                                 <li>High density non-slip</li>
@@ -137,7 +142,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-4 col-md-offset-8 wow fadeInRight">
+                        <div class="col-md-4 col-md-offset-7 wow fadeInRight">
                             <img src="img/foam-roller-detail-2.png" />
                             <ul>
                                 <li>Portable and travel-friendly</li>
@@ -150,7 +155,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-4 col-md-offset-2 wow fadeInLeft">
+                        <div class="col-md-4 col-md-offset-1 wow fadeInLeft">
                             <img src="img/foam-roller-detail-3.png" />
                             <ul>
                                 <li>PVC inner lining</li>
@@ -213,12 +218,11 @@
                 <ul>
                     <li>PRIVACY POLICY</li>
                     <li>TERMS OF USE</li>
-                    <li> BLOG </li>
                     <li>DISTRIBUTORS</li>
                 </ul>
             </div>
             <div class="row">
-                <p>&copy; 2016 FHYSIO INTERNATIONAL. ALL RIGHTS RESERVED. </p>
+                <p>&copy; 2016 FHYSIOLAB INTERNATIONAL PTE LTD. ALL RIGHTS RESERVED. </p>
                 <p>FHYSIO PRODUCTS ARE NOT MEANT TO TREAT, CURE OR PREVENT ANY DISEASE OR CONDITION. TALK TO YOUR DOCTOR BEFORE USE. PLEASE ENJOY RESPONSIBLY.</p>
             </div>
         </div>
@@ -232,19 +236,36 @@
     <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
     <script src="js/wow.js"></script>
+    <script src="js/scrollmagic/uncompressed/ScrollMagic.js"></script>
+    <script src="js/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
     <!-- Theme JavaScript -->
     <script src="js/fhysio.js"></script>
     <script>
-        $(window).scroll(function () {
-            var st = $(this).scrollTop();
-            console.log(st)
-            if (st > 626) {
-                $('#target-1').css({ position: 'absolute', top: '-550px' })
-            }
-            if (st >= 1700) {
-                $('#target-1').css({ position: 'absolute', top: '50%' })
-            }
-        });
+        // init ScrollMagic Controller
+        var controller = new ScrollMagic.Controller();
+
+        // Scene Handler
+        var scene1 = new ScrollMagic.Scene({
+            triggerElement: "#target-1", // point of execution
+            duration: $(window).height() + 100, // pin element for the window height - 1
+            triggerHook: 0.09, // don't trigger until #pinned-trigger1 hits the top of the viewport
+            reverse: true // allows the effect to trigger when scrolled in the reverse direction
+        })
+        .setPin("#target-1") // the element we want to pin
+        .addTo(controller);
+
+     
+
+        //$(window).scroll(function () {
+        //    var st = $(this).scrollTop();
+        
+        //    if (st > 626) {
+        //        //$('#target-1').css({ position: 'fixed', top: '0' })
+        //    }
+        //    if (st >= 1700) {
+        //        $('#target-1').css({ position: 'absolute', top: '50%' })
+        //    }
+        //});
     </script>
 </body>
 </html>

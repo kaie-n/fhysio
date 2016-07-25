@@ -4,8 +4,10 @@
 function collapseNavbar() {
     if ($(".navbar").offset().top > 50) {
         $(".navbar-fixed-top").addClass("top-nav-collapse");
+        $(".logo-nav").addClass('logo-nav-green');
     } else {
         $(".navbar-fixed-top").removeClass("top-nav-collapse");
+        $(".logo-nav").removeClass('logo-nav-green');
     }
 }
 
@@ -38,6 +40,12 @@ var wow = new WOW({
 wow.init();
 
 $(document).ready(function () {
+    if (localStorage.getItem('popState') != 'shown') {
+        $('#subscribe').modal();
+        localStorage.setItem('popState', 'shown')
+    }
+    var footer_height = $('footer').height();
+    $('#footer-sections').css({ bottom: footer_height })
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         //
         if ($('.broadway').length) {
